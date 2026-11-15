@@ -1358,47 +1358,98 @@ footer .wrap {
 
 /* ── PAGE BANNER (inner pages) ───────────────────────────────────────────── */
 .page-banner {
-  background: var(--deep);
+  position: relative;
+  overflow: hidden;
+  background-color: #07090f;
+  background-image: 
+    linear-gradient(90deg, rgba(7, 9, 15, 0.96) 0%, rgba(7, 9, 15, 0.88) 50%, rgba(7, 9, 15, 0.72) 100%),
+    radial-gradient(ellipse at 85% 25%, rgba(217, 173, 91, 0.16) 0%, transparent 65%),
+    var(--banner-bg, url('../images/hero_showroom.jpg'));
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   border-bottom: 1px solid var(--line);
-  padding: clamp(32px, 5vw, 56px) 0;
+  padding: clamp(60px, 8vw, 104px) 0 clamp(50px, 7vw, 84px);
 }
 
-.page-banner-content {}
+.page-banner::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--brand), transparent);
+  opacity: 0.75;
+}
 
-.breadcrumbs {
-  display: flex;
+.page-banner.about-banner {
+  --banner-bg: url('../images/team_service.jpg');
+  background-position: center 30%;
+}
+
+.page-banner.products-banner {
+  --banner-bg: url('../images/appliances_display.jpg');
+  background-position: center center;
+}
+
+.page-banner.services-banner {
+  --banner-bg: url('../images/laptop_repair.jpg');
+  background-position: center 32%;
+}
+
+.page-banner.contact-banner {
+  --banner-bg: url('../images/hero_showroom.jpg');
+  background-position: center center;
+}
+
+.page-banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 860px;
+}
+
+.banner-badge {
+  display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-size: 14px;
-  color: var(--muted);
-  margin-bottom: 16px;
+  gap: 8px;
+  background: rgba(217, 173, 91, .14);
+  border: 1px solid rgba(217, 173, 91, .32);
+  color: var(--accent);
+  font: 600 13.5px 'Source Sans 3', sans-serif;
+  letter-spacing: 0.02em;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
-.breadcrumbs a {
-  color: var(--muted);
-}
-
-.breadcrumbs a:hover {
-  color: var(--brand);
-}
-
-.breadcrumbs span {
-  color: var(--ink);
-}
-
-.breadcrumbs::before {
-  display: none;
+.banner-badge svg {
+  width: 15px;
+  height: 15px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 2.2;
+  flex-shrink: 0;
 }
 
 .page-banner h1 {
-  font-size: clamp(28px, 4.5vw, 46px);
-  color: var(--ink);
-  margin-bottom: 10px;
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(30px, 4.2vw, 46px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin-bottom: 14px;
 }
 
 .page-banner p {
-  color: var(--muted);
-  max-width: 60ch;
+  color: #b5c3d7;
+  font-size: clamp(16px, 1.8vw, 18px);
+  line-height: 1.65;
+  max-width: 68ch;
+  margin: 0;
 }
 
 /* ── FLOATING WHATSAPP ───────────────────────────────────────────────────── */
