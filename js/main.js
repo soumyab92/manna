@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Mobile Nav Dropdown (Nexora Header System)
+  // Mobile Nav Drawer (Nexora Header System)
   const navDrawer = document.getElementById('nav');
   const scrim = document.getElementById('scrim');
   const menuBtn = document.getElementById('menu');
@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (navDrawer) navDrawer.classList.toggle('open', open);
     if (scrim) scrim.classList.toggle('on', open);
     if (menuBtn) menuBtn.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+    if (open && closeBtn) closeBtn.focus();
   }
 
   if (menuBtn) {

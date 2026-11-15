@@ -672,11 +672,17 @@
     ['mouseleave', 'focusout', 'touchend'].forEach(function (ev) { rs.addEventListener(ev, rplay, { passive: true }) });
     addEventListener('resize', rsync);
 
-    /* ── Mobile Nav Dropdown ── */
-    function drawer(o) { $('nav').classList.toggle('open', o); if ($('scrim')) $('scrim').classList.toggle('on', o); $('menu').setAttribute('aria-expanded', o); }
+    /* ── Mobile Nav Drawer ── */
+    function drawer(o) {
+      $('nav').classList.toggle('open', o);
+      if ($('scrim')) $('scrim').classList.toggle('on', o);
+      $('menu').setAttribute('aria-expanded', o);
+      document.body.style.overflow = o ? 'hidden' : '';
+      if (o && $('x')) $('x').focus();
+    }
     $('menu').onclick = function (e) { e.stopPropagation(); var o = !$('nav').classList.contains('open'); drawer(o); };
-    if ($('x')) $('x').onclick = function () { drawer(false); };
-    if ($('scrim')) $('scrim').onclick = function () { drawer(false); };
+    if ($('x')) $('x').onclick = function (e) { e.stopPropagation(); drawer(false); };
+    if ($('scrim')) $('scrim').onclick = function (e) { e.stopPropagation(); drawer(false); };
     $('nav').onclick = function (e) { if (e.target.tagName === 'A' || e.target.hasAttribute('data-open-modal')) drawer(false); };
     document.addEventListener('click', function (e) { if ($('nav').classList.contains('open') && !$('nav').contains(e.target) && !$('menu').contains(e.target)) drawer(false); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { drawer(false); closeModals(); } });
