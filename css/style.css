@@ -36,6 +36,8 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   scroll-padding-top: 76px;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -45,7 +47,8 @@ body {
   line-height: 1.6;
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
-  overflow-x: clip;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 h1,
@@ -483,7 +486,7 @@ nav a.active {
 /* Chip badge on art */
 .chip {
   position: absolute;
-  right: -6px;
+  right: 0;
   bottom: -30px;
   background: rgba(255, 255, 255, .1);
   backdrop-filter: blur(12px);
@@ -1181,7 +1184,8 @@ footer {
   border-top: 1px solid var(--line);
 }
 
-footer .wrap {
+.footer-grid,
+footer > .wrap:not(.footer-bottom-inner) {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
   gap: 40px;
@@ -1233,17 +1237,31 @@ footer .wrap {
 .footer-hours {}
 
 .footer-bottom {
-  margin-top: clamp(28px, 4vw, 40px);
+  margin-top: clamp(32px, 5vw, 48px);
   border-top: 1px solid var(--line);
-  padding: 20px 0;
+  padding: 22px 0 28px;
 }
 
 .footer-bottom-inner {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 16px;
   flex-wrap: wrap;
   font-size: 14px;
+}
+
+.footer-bottom-inner .footer-copy {
+  color: #8e9bb0;
+}
+
+.footer-bottom-inner .footer-badges {
+  color: var(--accent);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 /* ── MODALS ──────────────────────────────────────────────────────────────── */
@@ -2606,15 +2624,16 @@ footer .wrap {
     grid-template-columns: 1fr 1fr;
   }
 
-  footer .wrap,
-  .footer-grid {
+  .footer-grid,
+  footer > .wrap:not(.footer-bottom-inner) {
     grid-template-columns: 1fr;
     gap: 28px;
   }
 
   .footer-bottom-inner {
-    flex-direction: column;
-    gap: 6px;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px;
   }
 
   .cta-banner {
