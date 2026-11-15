@@ -434,7 +434,7 @@ document.addEventListener('DOMContentLoaded', () => {
           submitBtn.innerHTML = originalBtnHtml;
         }
 
-        modalOverlays.forEach(modal => modal.classList.remove('active'));
+        modalOverlays.forEach(modal => modal.classList.remove('active', 'open'));
         document.body.style.overflow = '';
 
         showWhatsAppToast(whatsappUrl);

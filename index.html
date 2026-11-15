@@ -703,6 +703,7 @@
     document.querySelectorAll('[data-open-modal]').forEach(function (btn) { btn.addEventListener('click', function () { openModal(btn.getAttribute('data-open-modal')); }); });
     document.querySelectorAll('.modal-overlay').forEach(function (m) { m.addEventListener('click', function (e) { if (e.target === m) closeModals(); }); });
     document.querySelectorAll('[data-close-modal]').forEach(function (btn) { btn.addEventListener('click', closeModals); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModals(); });
     document.querySelector('.js-repair-form').onsubmit = function (e) {
       e.preventDefault();
       var d = new FormData(e.target), msg = 'Hi Manna Infotech, I want to book a repair:\n';
