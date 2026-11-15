@@ -662,6 +662,7 @@ nav a.active {
   gap: 20px;
   padding-top: 22px;
   padding-bottom: 22px;
+  text-align: center;
 }
 
 .bar b {
@@ -689,7 +690,7 @@ section {
   padding: clamp(48px, 6vw, 80px) 0;
 }
 
-.cta-sec + section {
+.cta-sec+section {
   padding-top: 0;
 }
 
@@ -1365,7 +1366,7 @@ footer {
 }
 
 .footer-grid,
-footer > .wrap:not(.footer-bottom-inner) {
+footer>.wrap:not(.footer-bottom-inner) {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
   gap: 40px;
@@ -1485,6 +1486,7 @@ footer > .wrap:not(.footer-bottom-inner) {
     opacity: 0;
     transform: scale(.94) translateY(16px);
   }
+
   to {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -1646,7 +1648,7 @@ select.form-control option {
   position: relative;
   overflow: hidden;
   background-color: #07090f;
-  background-image: 
+  background-image:
     linear-gradient(180deg, rgba(7, 9, 15, 0.72) 0%, rgba(7, 9, 15, 0.94) 100%),
     linear-gradient(90deg, rgba(7, 9, 15, 0.94) 0%, rgba(7, 9, 15, 0.8) 55%, rgba(7, 9, 15, 0.5) 100%),
     var(--banner-bg, url('../images/hero_showroom.jpg'));
@@ -3003,7 +3005,7 @@ select.form-control option {
   }
 
   .footer-grid,
-  footer > .wrap:not(.footer-bottom-inner) {
+  footer>.wrap:not(.footer-bottom-inner) {
     grid-template-columns: 1fr;
     gap: 28px;
   }
