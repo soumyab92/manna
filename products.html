@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Product Categories &amp; Sales | Manna Infotech (মান্না ইনফোটেক) - Belda, NH 5</title>
+  <meta name="description"
+    content="Explore product categories at Manna Infotech in Belda: Laptops, Desktops, Computer Parts, Printers, Smart TVs, Inverter ACs, Refrigerators, and CCTV Security Systems. Call 078720 00333 for daily stock and best price.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header>
+    <div class="wrap">
+      <a class="logo" href="index.html"><i></i>Manna Infotech</a>
+      <div class="scrim" id="scrim"></div>
+      <nav id="nav" aria-label="Main">
+        <button class="x" id="x" aria-label="Close menu"><svg viewBox="0 0 24 24">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg></button>
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <button class="btn" id="open" data-open-modal="inquiryModal">Inquire Price</button>
+      <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══ PAGE BANNER ═══ -->
+  <header class="page-banner">
+    <div class="wrap page-banner-content">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <a href="index.html">Home</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          style="width:14px;height:14px;stroke:var(--muted);">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+        <span>Products &amp; Retail Categories</span>
+      </nav>
+      <h1>Electronics &amp; Hardware <span class="highlight">Categories in Belda</span></h1>
+      <p>We deal in all leading brands of laptops, computers, accessories, printers, Smart TVs, air conditioners,
+        refrigerators, and security systems. Stock updates daily — contact us or visit our Belda showroom for the latest
+        availability and discounts.</p>
+    </div>
+  </header>
+
+  <!-- ═══ NOTICE BAR FOR DAILY STOCK ═══ -->
+  <div class="notice-bar">
+    <div class="wrap notice-bar-inner">
+      <div class="notice-bar-text">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+        <span><strong>Live Showroom Inventory:</strong> New shipments arrive weekly with seasonal manufacturer
+          promotions. Call <strong>078720 00333</strong> or WhatsApp us directly for today's best price.</span>
+      </div>
+      <a href="tel:07872000333" class="btn btn-sm">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+          </path>
+        </svg>
+        Call 078720 00333
+      </a>
+    </div>
+  </div>
+
+  <!-- ═══ FILTER & PRODUCTS CATALOG ═══ -->
+  <section class="section" id="productsCatalog">
+    <div class="wrap">
+      <!-- Filter Tabs -->
+      <div class="filter-tabs">
+        <button type="button" class="filter-btn active" data-filter="all">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          All Offerings
+        </button>
+        <button type="button" class="filter-btn" data-filter="laptops">
+          <svg viewBox="0 0 24 24">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+          Laptops &amp; PCs
+        </button>
+        <button type="button" class="filter-btn" data-filter="accessories">
+          <svg viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+          </svg>
+          Parts &amp; Accessories
+        </button>
+        <button type="button" class="filter-btn" data-filter="printers">
+          <svg viewBox="0 0 24 24">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+          Printers &amp; Inks
+        </button>
+        <button type="button" class="filter-btn" data-filter="appliances">
+          <svg viewBox="0 0 24 24">
+            <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+            <polyline points="17 2 12 7 7 2"></polyline>
+          </svg>
+          Smart TVs, AC &amp; Fridges
+        </button>
+        <button type="button" class="filter-btn" data-filter="security">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          CCTV &amp; Security
+        </button>
+      </div>
+
+      <!-- Categories Grid -->
+      <div class="products-grid" id="productGridContainer">
+
+        <!-- Category 1: Laptops Range -->
+        <article class="product-card" data-category="laptops">
+          <div class="product-media">
+            <img src="images/hero_showroom.jpg" alt="Laptops and Notebooks Range" class="product-img">
+            <span class="product-tag">Computing</span>
+            <span class="product-status">Authorized</span>
+          </div>
+          <div class="product-content">
+            <span class="product-brand">HP • Dell • Lenovo • Asus • Acer</span>
+            <h3 class="product-title">Laptops (Student, Business &amp; Gaming)</h3>
+            <p class="product-desc">Brand-new laptops for school, college, business billing, and high-end gaming.
+              Complete with official warranty, original OS setup, and free initial configuration.</p>
+            <div class="product-specs">
+              <span class="spec-chip">Core i3 / i5 / i7 / Ryzen</span>
+              <span class="spec-chip">8GB to 32GB RAM</span>
+              <span class="spec-chip">Fast NVMe SSDs</span>
+              <span class="spec-chip">Lightweight Ultrabooks</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price-box">
+                <span class="price-label">Pricing</span>
+                <span class="price-value">Daily Best Deals</span>
+              </div>
+              <button type="button" class="btn btn-sm" data-open-modal="inquiryModal"
+                data-product-title="Laptops Inquiry">Inquire Models</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Category 2: Desktops & Custom PCs -->
+        <article class="product-card" data-category="laptops">
+          <div class="product-media">
+            <img src="images/hero_showroom.jpg" alt="Desktop Computers and Assembled PCs" class="product-img">
+            <span class="product-tag">Custom Builds</span>
+            <span class="product-status">Built to Budget</span>
+          </div>
+          <div class="product-content">
+            <span class="product-brand">Intel • AMD • Asus • Gigabyte</span>
+            <h3 class="product-title">Desktop Computers &amp; Workstations</h3>
+            <p class="product-desc">Custom-built and branded desktop computers tailored for accounting offices, cyber
+              cafes, schools, graphic designers, and gaming enthusiasts in Belda.</p>
+            <div class="product-specs">
+              <span class="spec-chip">Custom Configurations</span>
+              <span class="spec-chip">Full HD LED Monitors</span>
+              <span class="spec-chip">Cabinet &amp; SMPS</span>
+              <span class="spec-chip">Tested Stability</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price-box">
+                <span class="price-label">Options</span>
+                <span class="price-value">Built to Order</span>
+              </div>
+              <button type="button" class="btn btn-sm" data-open-modal="inquiryModal"
+                data-product-title="Desktop PC Build Inquiry">Get PC Quote</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Category 3: Electronic Parts & Upgrades -->
+        <article class="product-card" data-category="accessories">
+          <div class="product-media">
+            <img src="images/laptop_repair.jpg" alt="Electronic Parts SSD RAM" class="product-img">
+            <span class="product-tag">Electronic Parts</span>
+            <span class="product-status">In-Store Fitting</span>
+          </div>
+          <div class="product-content">
+            <span class="product-brand">Kingston • Crucial • WD • Seagate</span>
+            <h3 class="product-title">SSDs, RAM &amp; Replacement Parts</h3>
+            <p class="product-desc">Speed up any slow computer or laptop with genuine solid-state drives (SSDs) and
+              memory upgrades. Laptop replacement batteries, chargers, and keyboards available.</p>
+            <div class="product-specs">
+              <span class="spec-chip">NVMe M.2 &amp; SATA SSDs</span>
+              <span class="spec-chip">DDR4 / DDR5 RAM</span>
+              <span class="spec-chip">Original Laptop Adapters</span>
+              <span class="spec-chip">Free OS Cloning</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price-box">
+                <span class="price-label">Service</span>
+                <span class="price-value">On-The-Spot</span>
+              </div>
+              <button type="button" class="btn btn-sm" data-open-modal="inquiryModal"
+                data-product-title="SSD / RAM Upgrade Inquiry">Check Upgrade</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Category 4: Peripherals & Accessories -->
+        <article class="product-card" data-category="accessories">
+          <div class="product-media">
+            <img src="images/laptop_repair.jpg" alt="Computer Accessories" class="product-img">
+            <span class="product-tag">Peripherals</span>
+            <span class="product-status">Always In Stock</span>
+          </div>
+          <div class="product-content">
+            <span class="product-brand">Logitech • HP • Dell • Zebronics • TP-Link</span>
+            <h3 class="product-title">Keyboards, Mice, Monitors &amp; Routers</h3>
+            <p class="product-desc">Everyday computing essentials including wireless keyboard-mouse combos, HD monitors,
+              WiFi routers, USB adapters, webcams, headphones, and power surge strips.</p>
+            <div class="product-specs">
+              <span class="spec-chip">Wired &amp; Wireless</span>
+              <span class="spec-chip">High-Speed WiFi Routers</span>
+              <span class="spec-chip">Cables &amp; Converters</span>
+              <span class="spec-chip">UPS Backup Units</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price-box">
+                <span class="price-label">Availability</span>
+                <span class="price-value">Ready Pickup</span>
+              </div>
+              <button type="button" class="btn btn-sm" data-open-modal="inquiryModal"
+                data-product-title="Accessories Inquiry">Inquire Items</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Category 5: Printers & Toners -->
+        <article class="product-card" data-category="printers">
+          <div class="product-media">
+            <img src="images/printer_repair.jpg" alt="Printers and Scanners" class="product-img">
+            <span class="product-tag">Printing Solutions</span>
+            <span class="product-status">Authorized</span>
+          </div>
+          <div class="product-content">
+            <span class="product-brand">Epson • HP • Canon • Brother</span>
+            <h3 class="product-title">All-in-One InkTank &amp; Laser Printers</h3>
+            <p class="product-desc">Ultra-low cost per page ink tank printers with mobile Wi-Fi, heavy-duty monochrome
+              office laser printers, genuine ink refill bottles, and toner cartridges.</p>
+            <div class="product-specs">
+              <span class="spec-chip">Print, Scan, Copy</span>
+              <span class="spec-chip">Low Running Cost</span>
+              <span class="spec-chip">Original Inks &amp; Toners</span>
+              <span class="spec-chip">Refill Support</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price-box">
+                <span class="price-label">Belda Store</span>
+                <span class="price-value">Low Cost Upkeep</span>
+              </div>
+              <button type="button" class="btn btn-sm" data-open-modal="inquiryModal"
+                data-product-title="Printers Inquiry">Inquire Models</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Category 6: Smart TVs -->
+        <article class="product-card" data-category="appliances">
+          <div class="product-media">
+            <img src="images/appliances_display.jpg" alt="Smart 4K LED TVs" class="product-img">
+            <span class="product-tag">Entertainment</span>
+            <span class="product-status">Authorized</span>
+          </div>
+          <div class="product-content">
+            <span class="product-brand">Samsung • LG • Sony • Mi • TCL</span>
+            <h3 class="product-title">Smart LED &amp; 4K UHD Televisions</h3>
+            <p class="product-desc">Experience vibrant entertainment with 32-inch, 43-inch, 50-inch, and 55-inch 4K
+              Smart TVs with built-in Netflix, YouTube, OTT apps, and surround sound.</p>
+            <div class="product-specs">
+              <span class="spec-chip">32" to 55"+ Sizes</span>
+              <span class="spec-chip">4K Ultra HD &amp; HDR</span>
+              <span class="spec-chip">Smart Voice Remote</span>
+              <span class="spec-chip">Wall Mount &amp; Setup</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price-box">
+                <span class="price-label">Offers</span>
+                <span class="price-value">In-Store Deals</span>
+              </div>
+              <button type="button" class="btn btn-sm" data-open-modal="inquiryModal"
+                data-product-title="Smart TV Inquiry">Inquire TVs</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Category 7: Inverter Air Conditioners -->
+        <article class="product-card" data-category="appliances">
+          <div class="product-media">
+            <img src="images/appliances_display.jpg" alt="Inverter Split ACs" class="product-img">
+            <span class="product-tag">Cooling Solutions</span>
+            <span class="product-status">Energy Efficient</span>
+          </div>
+          <div class="product-content">
+            <span class="product-brand">Voltas • Daikin • LG • Lloyd • Blue Star</span>
+            <h3 class="product-title">Inverter Split &amp; Window Air Conditioners</h3>
+            <p class="product-desc">High-ambient cooling inverter ACs engineered for intense summer heat with 100%
+              copper condenser coils and 10-year compressor warranties.</p>
+            <div class="product-specs">
+              <span class="spec-chip">1 Ton, 1.5 Ton &amp; 2 Ton</span>
+              <span class="spec-chip">3-Star &amp; 5-Star Ratings</span>
+              <span class="spec-chip">100% Copper Tubes</span>
+              <span class="spec-chip">Doorstep Delivery</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price-box">
+                <span class="price-label">Delivery</span>
+                <span class="price-value">Doorstep Available</span>
+              </div>
+              <button type="button" class="btn btn-sm" data-open-modal="inquiryModal"
+                data-product-title="Air Conditioner Inquiry">Inquire AC Deals</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Category 8: Refrigerators -->
+        <article class="product-card" data-category="appliances">
+          <div class="product-media">
+            <img src="images/appliances_display.jpg" alt="Refrigerators Range" class="product-img">
+            <span class="product-tag">Refrigeration</span>
+            <span class="product-status">Authorized</span>
+          </div>
+          <div class="product-content">
+            <span class="product-brand">Whirlpool • Samsung • LG • Godrej</span>
+            <h3 class="product-title">Single Door &amp; Frost-Free Refrigerators</h3>
+            <p class="product-desc">Energy-efficient household refrigerators featuring smart inverter compressors, deep
+              freeze drawers, active deodorizers, and stabilizer-free operation.</p>
+            <div class="product-specs">
+              <span class="spec-chip">190L to 300L+ Capacities</span>
+              <span class="spec-chip">Single &amp; Double Door</span>
+              <span class="spec-chip">Inverter Compressors</span>
+              <span class="spec-chip">Local Delivery</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price-box">
+                <span class="price-label">Warranty</span>
+                <span class="price-value">10 Yr Compressor</span>
+              </div>
+              <button type="button" class="btn btn-sm" data-open-modal="inquiryModal"
+                data-product-title="Refrigerator Inquiry">Inquire Fridges</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Category 9: CCTV & Security -->
+        <article class="product-card" data-category="security">
+          <div class="product-media">
+            <img src="images/hero_showroom.jpg" alt="CCTV Cameras and Security" class="product-img">
+            <span class="product-tag">Home Security</span>
+            <span class="product-status">Total Solution</span>
+          </div>
+          <div class="product-content">
+            <span class="product-brand">CP Plus • Hikvision</span>
+            <h3 class="product-title">CCTV Cameras &amp; Security Systems</h3>
+            <p class="product-desc">Complete security and video surveillance for homes, retail shops, offices, and
+              warehouses. Dome and bullet cameras with infrared night vision and phone live streaming.</p>
+            <div class="product-specs">
+              <span class="spec-chip">Full HD &amp; 2K Cameras</span>
+              <span class="spec-chip">Night Vision &amp; Audio</span>
+              <span class="spec-chip">4/8/16 Channel DVRs</span>
+              <span class="spec-chip">Mobile Live View</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-price-box">
+                <span class="price-label">Service</span>
+                <span class="price-value">Setup Included</span>
+              </div>
+              <button type="button" class="btn btn-sm" data-open-modal="inquiryModal"
+                data-product-title="CCTV Security System Inquiry">Book Inspection</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ B2B PROCUREMENT SECTION ═══ -->
+  <section class="section services" id="customOrders">
+    <div class="wrap about-grid">
+      <div>
+        <span class="section-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+          B2B &amp; Institutional Supply
+        </span>
+        <h2 class="section-title">Institutional Procurement &amp; GST Invoicing</h2>
+        <p class="section-subtitle" style="margin-bottom: 1.5rem;">
+          Equipping a new office, medical clinic, accounting firm, or school in the Belda area? Manna Infotech provides
+          institutional discounts, official GST invoices for tax credit, and on-site setup.
+        </p>
+        <ul class="service-checklist" style="margin-bottom: 2rem;">
+          <li class="check-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Official GST Tax Invoicing for business input tax credit
+          </li>
+          <li class="check-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Bulk printer and computer network installations
+          </li>
+          <li class="check-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Doorstep delivery and ongoing maintenance contracts (AMC)
+          </li>
+        </ul>
+        <button type="button" class="btn" data-open-modal="inquiryModal"
+          data-product-title="Bulk Institutional Supply Inquiry">
+          Inquire Bulk Rates
+        </button>
+      </div>
+      <div class="about-img-box">
+        <img src="images/hero_showroom.jpg" alt="Manna Infotech Showroom Procurement" class="about-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA BANNER ═══ -->
+  <section class="cta-sec">
+    <div class="wrap">
+      <div class="cta">
+        <h2>Need urgent quote or want to check today's stock?</h2>
+        <a class="btn" href="tel:07872000333">Call 078720 00333</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-col">
+        <a class="logo footer-logo" href="index.html"><i></i>Manna Infotech</a>
+        <p class="footer-about">4.2-star rated computer and electronics store in Belda, West Bengal. Sales, repair and
+          home security under one roof. Open daily till 9 PM.</p>
+      </div>
+      <div class="footer-col">
+        <b class="footer-heading">Quick Links</b>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="products.html">Products &amp; Sales</a>
+          <a href="services.html">Repair Services</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <b class="footer-heading">Services</b>
+        <nav class="footer-nav">
+          <a href="services.html">PC &amp; Laptop Repair</a>
+          <a href="services.html">Low Cost Printer Repair</a>
+          <a href="services.html">Laser Toner Refilling</a>
+          <a href="services.html">CCTV &amp; Home Security</a>
+          <a href="services.html">TV, AC &amp; Fridge Service</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <b class="footer-heading">Store Location</b>
+        <p class="footer-addr">Near Police Station, NH 5, Belda, West Bengal 721424</p>
+        <a href="tel:07872000333" class="footer-phone">078720 00333</a>
+        <p class="footer-hours">Open Daily &bull; 9:30 AM – 9:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="wrap footer-bottom-inner">
+        <span>&copy; 2026 Manna Infotech (মান্না ইনফোটেক). Belda, West Bengal. All Rights Reserved.</span>
+        <span>Google 4.2 Rating &bull; Doorstep Delivery &bull; Genuine Warranty</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ PRODUCT INQUIRY MODAL ═══ -->
+  <div class="modal-overlay" id="inquiryModal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">Inquire Today's Price &amp; Live Stock</h3>
+        <button type="button" class="modal-close" data-close-modal aria-label="Close Modal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="js-ajax-form">
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label class="form-label" for="inquiryItem">Category or Item of Interest</label>
+              <input type="text" id="inquiryItem" name="inquiry_item" class="form-control"
+                placeholder="e.g. HP / Dell Laptop, Inverter AC, Printer, CCTV" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="inqName">Your Name</label>
+              <input type="text" id="inqName" name="name" class="form-control" placeholder="Your Full Name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="inqPhone">Phone Number</label>
+              <input type="tel" id="inqPhone" name="phone" class="form-control" placeholder="e.g. 07872000333" required>
+            </div>
+            <div class="form-group full-width">
+              <label class="form-label" for="inqNotes">Your Requirement / Budget</label>
+              <textarea id="inqNotes" name="notes" class="form-control"
+                placeholder="Tell us what you're looking for (e.g. laptop for student / 1.5 ton split AC / toner refill)..."></textarea>
+            </div>
+            <div class="form-group full-width">
+              <button type="submit" class="btn btn-whatsapp btn-block">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                  </path>
+                </svg>
+                Inquire Live Stock via WhatsApp
+              </button>
+              <p class="form-submit-hint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                Inquiry details will open in WhatsApp (+91 78720 00333) with current prices and stock availability.
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ FLOATING WHATSAPP ═══ -->
+  <a href="https://wa.me/917872000333" target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn"
+    aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path
+        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+    </svg>
+    <span class="whatsapp-float-tooltip">Chat on WhatsApp</span>
+  </a>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

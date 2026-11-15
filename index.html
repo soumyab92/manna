@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Manna Infotech (মান্না ইনফোটেক) | Belda - Computers, TVs, AC &amp; Repair Services</title>
+  <meta name="description"
+    content="Manna Infotech in Belda, West Bengal (4.2 rating, 280+ reviews). Sales of laptops, desktops, Smart TVs, ACs, refrigerators, CCTV security and certified chip-level printer and computer repair.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header>
+    <div class="wrap">
+      <a class="logo" href="index.html"><i></i>Manna Infotech</a>
+      <div class="scrim" id="scrim"></div>
+      <nav id="nav" aria-label="Main">
+        <button class="x" id="x" aria-label="Close menu"><svg viewBox="0 0 24 24">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg></button>
+        <a href="index.html" class="active">Home</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <button class="btn" id="open" data-open-modal="repairModal">Book Repair</button>
+      <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ═══ HERO SLIDER ═══ -->
+    <div class="hero slider" role="region" aria-roledescription="carousel" aria-label="Featured offers">
+
+      <!-- Slide 1 — Showroom -->
+      <div class="slide s1 on" role="group" aria-label="1 of 4">
+        <div class="wrap">
+          <div>
+            <div class="hero-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+              4.2 Rated on Google &bull; 280+ Reviews &bull; Belda, NH 5
+            </div>
+            <h1>Belda's Premier Store for <span class="highlight">Computers, Electronics</span> &amp; Certified Repairs
+            </h1>
+            <p>Near Belda Police Station on NH 5. Brand-new laptops, custom desktops, Smart TVs, Inverter ACs,
+              refrigerators, CCTV security and high-precision chip-level repairs.</p>
+            <div class="row">
+              <a class="btn gold" href="products.html">Explore Products</a>
+              <a class="btn ghost" href="services.html">Repair Services</a>
+            </div>
+          </div>
+          <div class="art photo" aria-hidden="true">
+            <img src="images/hero_showroom.jpg" alt="Manna Infotech Electronics &amp; Computer Retail Showroom Belda">
+            <div class="chip">4.2★ Google Rated<small>280+ verified reviews</small></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 — Laptop Repair -->
+      <div class="slide s2" role="group" aria-label="2 of 4">
+        <div class="wrap">
+          <div>
+            <div class="hero-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+              </svg>
+              Anti-Static Lab &bull; 90-Day Warranty
+            </div>
+            <h1>Precision <span class="highlight">Motherboard Micro-Soldering</span> &amp; Laptop Diagnostics</h1>
+            <p>Don't replace your costly motherboard — our certified technicians fix dead laptops, no-display issues,
+              liquid spills and cracked screens with original OEM parts at up to 70% lower cost.</p>
+            <div class="row">
+              <button type="button" class="btn gold" data-open-modal="repairModal">Book Laptop Diagnostic</button>
+              <a href="tel:07872000333" class="btn ghost">Call 078720 00333</a>
+            </div>
+          </div>
+          <div class="art photo" aria-hidden="true">
+            <img src="images/laptop_repair.jpg" alt="Certified Laptop Motherboard Micro-Soldering in Belda">
+            <div class="chip">Save up to 70%<small>vs buying a new board</small></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 — Printer Repair -->
+      <div class="slide s3" role="group" aria-label="3 of 4">
+        <div class="wrap">
+          <div>
+            <div class="hero-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 6 2 18 2 18 9" />
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+                <rect x="6" y="14" width="12" height="8" />
+              </svg>
+              Low Cost Printer Service &bull; Highly Praised on Google
+            </div>
+            <h1>Fast, Low-Cost <span class="highlight">Printer Repair</span> &amp; Laser Toner Refilling</h1>
+            <p>Rated across Belda for affordable, dependable printer maintenance. Ink-tank unclogging, paper jam fixes,
+              original inks, and high-yield laser cartridge refilling for HP, Epson, Canon and Brother.</p>
+            <div class="row">
+              <a class="btn gold" href="services.html">Printer Services</a>
+              <button type="button" class="btn ghost" data-open-modal="repairModal">Book Service</button>
+            </div>
+          </div>
+          <div class="art photo" aria-hidden="true">
+            <img src="images/printer_repair.jpg" alt="Low Cost Printer Repair and Toner Refill in Belda">
+            <div class="chip">Same-day service<small>HP &bull; Epson &bull; Canon &bull; Brother</small></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4 — Appliances & CCTV -->
+      <div class="slide s4" role="group" aria-label="4 of 4">
+        <div class="wrap">
+          <div>
+            <div class="hero-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <rect x="2" y="7" width="20" height="15" rx="2" ry="2" />
+                <polyline points="17 2 12 7 7 2" />
+              </svg>
+              Doorstep Delivery &bull; On-Site Installation in Belda
+            </div>
+            <h1>Smart 4K TVs, <span class="highlight">Inverter ACs, Fridges</span> &amp; CCTV Systems</h1>
+            <p>4K HDR smart LED televisions, 5-star energy-saving inverter split ACs, frost-free refrigerators and
+              complete CP Plus / Hikvision CCTV camera installation with mobile live streaming.</p>
+            <div class="row">
+              <a class="btn gold" href="products.html">View Appliances</a>
+              <button type="button" class="btn ghost" data-open-modal="repairModal">Book CCTV / AC Visit</button>
+            </div>
+          </div>
+          <div class="art photo" aria-hidden="true">
+            <img src="images/appliances_display.jpg" alt="Smart 4K TVs, Inverter ACs and Refrigerators Belda">
+            <div class="chip">Doorstep Delivery<small>Belda &amp; adjacent regions</small></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ctrl">
+        <div class="wrap">
+          <div class="dots" id="dots"></div>
+          <div class="arr">
+            <button id="prev" aria-label="Previous slide"><svg viewBox="0 0 24 24">
+                <path d="M15 5l-7 7 7 7" />
+              </svg></button>
+            <button id="next" aria-label="Next slide"><svg viewBox="0 0 24 24">
+                <path d="M9 5l7 7-7 7" />
+              </svg></button>
+          </div>
+        </div>
+      </div>
+    </div><!-- /hero -->
+
+    <!-- ═══ TRUST BAR ═══ -->
+    <div class="bar">
+      <div class="wrap">
+        <div><b>4.2 ★ Google Rated</b><span>280+ verified reviews in Belda</span></div>
+        <div><b>Low Cost Repair</b><span>Printers, PCs &amp; Laptops</span></div>
+        <div><b>Open Till 9 PM</b><span>7 Days a Week, All Year</span></div>
+        <div><b>Belda, NH 5</b><span>Near Police Station</span></div>
+      </div>
+    </div>
+
+    <!-- ═══ PRODUCTS ═══ -->
+    <section id="products">
+      <div class="wrap">
+        <div class="head">
+          <div>
+            <h2>Products &amp; Sales</h2>
+            <p>Brand-new laptops, desktops, Smart TVs, ACs, refrigerators, printers and accessories. Click Inquire to
+              get today's price on WhatsApp.</p>
+          </div>
+          <div class="tabs" id="tabs" role="group" aria-label="Filter by category"></div>
+        </div>
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══ SERVICES ═══ -->
+    <section class="services" id="services">
+      <div class="wrap">
+        <div class="head">
+          <div>
+            <h2>Certified Repair Services</h2>
+            <p>Bring your device to the store or book a home visit. Every job gets a free physical check before work
+              starts.</p>
+          </div>
+        </div>
+        <div class="sgrid">
+          <div class="svc">
+            <h3>Laptop &amp; PC Motherboard Repair</h3>
+            <p>Micro-soldering, dead power troubleshooting, screen replacement, battery, keyboard, SSD upgrade. 90-day
+              warranty on all chip-level work.</p>
+          </div>
+          <div class="svc">
+            <h3>Printer Repair &amp; Toner Refilling</h3>
+            <p>Low-cost laser and ink-tank printer repair. Printhead flushing, paper jam fix, high-yield laser cartridge
+              and drum service. Same-day turnaround.</p>
+          </div>
+          <div class="svc">
+            <h3>TV, AC &amp; Refrigerator Service</h3>
+            <p>Smart LED TV backlight and board repair, AC gas charging and jet cleaning, refrigerator cooling coil and
+              thermostat repair.</p>
+          </div>
+          <div class="svc">
+            <h3>CCTV &amp; Home Security</h3>
+            <p>CP Plus and Hikvision HD camera installation with DVR setup and mobile live-view for homes, shops and
+              offices.</p>
+          </div>
+          <div class="svc">
+            <h3>Custom PC Builds</h3>
+            <p>Office, gaming and editing machines built to your budget and tested in front of you before delivery.</p>
+          </div>
+          <div class="svc">
+            <h3>Delivery &amp; Installation</h3>
+            <p>Doorstep delivery in Belda for TVs, ACs and refrigerators with full wall-mount setup and product
+              walkthrough.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ STATS ═══ -->
+    <div class="stats">
+      <div class="wrap">
+        <div><b data-to="15" data-s="+">15+</b><span>Years in Belda</span></div>
+        <div><b data-to="280" data-s="+">280+</b><span>Google Reviews</span></div>
+        <div><b data-to="40" data-s="+">40+</b><span>Brands Stocked</span></div>
+        <div><b data-to="98" data-s="%">98%</b><span>Repairs On Time</span></div>
+      </div>
+    </div>
+
+    <!-- ═══ REVIEWS ═══ -->
+    <section id="reviews">
+      <div class="wrap">
+        <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+          <symbol id="st" viewBox="0 0 24 24">
+            <path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 7L12 17.6 5.8 21.2l1.4-7L2 9.4l7-.9z" />
+          </symbol>
+        </svg>
+        <div class="head">
+          <div>
+            <h2>What Customers Say on Google</h2>
+            <p>Real verified feedback from people who visited our store near Belda Police Station.</p>
+          </div>
+          <div class="score"><b>4.2</b>
+            <div>
+              <div class="stars"></div><small>from 280+ Google reviews</small>
+            </div>
+          </div>
+        </div>
+        <div class="rev" id="rev" tabindex="0" aria-label="Customer reviews">
+          <article class="rc">
+            <div class="stars"></div>
+            <p>"From my experience this is one of the best place to buy your laptops, computer, or other equipment. I
+              bought an HP laptop from here 3 years ago and it's running quite good, and after-sales service is also
+              very good."</p>
+            <div class="who"><span class="av">RP</span>
+              <div><b>Rahul Pradhan</b><small>Google Local Guide &bull; 20 reviews</small></div>
+            </div>
+          </article>
+          <article class="rc">
+            <div class="stars"></div>
+            <p>"Very good service and very good product quality. Above all, very polite, humble, and helpful behavior
+              from the staff. Highly recommended shop in Belda."</p>
+            <div class="who"><span class="av">BD</span>
+              <div><b>Bivasis Das</b><small>Google Local Guide &bull; Verified Review</small></div>
+            </div>
+          </article>
+          <article class="rc">
+            <div class="stars"></div>
+            <p>"Very polite service, nice behavior, and affordable price. Low cost printer repair and nice work. Also
+              provides total home security and CCTV repair solutions."</p>
+            <div class="who"><span class="av">SB</span>
+              <div><b>Soumya Bhattacharya</b><small>Google Local Reviewer &bull; Belda</small></div>
+            </div>
+          </article>
+          <article class="rc">
+            <div class="stars"></div>
+            <p>"Excellent service for my laptop motherboard repair. Transparent diagnosis, genuine parts used. Got it
+              back within 2 days working perfectly. Highly recommend!"</p>
+            <div class="who"><span class="av">PK</span>
+              <div><b>Priya Kumar</b><small>Google Review &bull; Belda</small></div>
+            </div>
+          </article>
+          <article class="rc">
+            <div class="stars"></div>
+            <p>"Best printer repair shop in Belda. Fixed my Epson ink tank printer same day at a very low cost. The
+              staff explained everything before starting the work."</p>
+            <div class="who"><span class="av">AM</span>
+              <div><b>Amit Mondal</b><small>Google Review &bull; Paschim Medinipur</small></div>
+            </div>
+          </article>
+          <article class="rc">
+            <div class="stars"></div>
+            <p>"Bought a Samsung Smart TV with doorstep delivery and wall mounting. The team was professional and
+              completed installation in one hour. Great experience!"</p>
+            <div class="who"><span class="av">RD</span>
+              <div><b>Raju Das</b><small>Google Review &bull; Belda</small></div>
+            </div>
+          </article>
+        </div>
+        <div class="rctrl">
+          <div class="rtrack"><i id="rthumb"></i></div>
+          <div class="arr">
+            <button id="rprev" aria-label="Previous reviews"><svg viewBox="0 0 24 24">
+                <path d="M15 5l-7 7 7 7" />
+              </svg></button>
+            <button id="rnext" aria-label="Next reviews"><svg viewBox="0 0 24 24">
+                <path d="M9 5l7 7-7 7" />
+              </svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FAQ ═══ -->
+    <section class="services" id="faq">
+      <div class="wrap faq">
+        <div class="head">
+          <div>
+            <h2>Questions We Hear Often</h2>
+          </div>
+        </div>
+        <details>
+          <summary>Do you offer same-day repair?</summary>
+          <p>Yes. Common faults such as printer cleaning, paper jams, screen replacements and battery replacements are
+            usually fixed the same day. Motherboard and micro-soldering repairs take 24–48 hours. You get a free
+            physical check and time estimate before any work begins.</p>
+        </details>
+        <details>
+          <summary>What brands do you sell and service?</summary>
+          <p>We stock HP, Dell, Lenovo, Asus, Acer, Samsung, LG, Sony, Voltas, Daikin and more. We service printers from
+            HP, Epson, Canon and Brother, and install CCTV from CP Plus and Hikvision.</p>
+        </details>
+        <details>
+          <summary>Is there a warranty on repairs?</summary>
+          <p>Yes. All chip-level and motherboard repairs carry a 90-day warranty. Screen and battery replacements come
+            with a 30-day warranty. We use original OEM parts wherever possible.</p>
+        </details>
+        <details>
+          <summary>Do you offer doorstep delivery?</summary>
+          <p>Yes. Doorstep delivery is available for TVs, ACs and refrigerators within Belda and adjacent areas. Wall
+            mounting and full setup is included for applicable products at no extra delivery charge.</p>
+        </details>
+        <details>
+          <summary>How do I book a repair or inquire about a product?</summary>
+          <p>Call or WhatsApp us at 078720 00333, or click the Book Repair button at the top. We confirm your slot
+            within one working hour. We are open daily from 9:30 AM to 9:00 PM.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ═══ CTA BANNER ═══ -->
+    <section class="cta-sec">
+      <div class="wrap">
+        <div class="cta">
+          <h2>Need urgent repair or want to check today's price?</h2>
+          <a class="btn" href="tel:07872000333">Call 078720 00333</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ VISIT / CONTACT ═══ -->
+    <section id="visit">
+      <div class="wrap visit">
+        <div class="info">
+          <h2>Visit the Store</h2>
+          <p style="color:var(--muted);max-width:44ch">See products in person, compare models side by side and talk to
+            our team before you buy or book a repair.</p>
+          <div
+            style="margin:20px 0; border-radius:14px; overflow:hidden; border:1px solid var(--line); box-shadow:0 16px 36px rgba(0,0,0,.45);">
+            <img src="images/team_service.jpg" alt="Manna Infotech Store Team in Belda"
+              style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block;">
+          </div>
+          <dl>
+            <dt>Address</dt>
+            <dd>Near Police Station, NH 5, Belda, Mahammadpur, West Bengal 721424</dd>
+            <dt>Hours</dt>
+            <dd>Open Daily &bull; 9:30 AM to 9:00 PM (all 7 days)</dd>
+            <dt>Phone</dt>
+            <dd><a href="tel:07872000333" style="color:var(--brand)">078720 00333</a></dd>
+            <dt>WhatsApp</dt>
+            <dd><a href="https://wa.me/917872000333" style="color:var(--brand)">+91 78720 00333</a></dd>
+          </dl>
+        </div>
+        <form id="visitForm">
+          <label>Name<input name="n" required autocomplete="name" placeholder="Your full name"></label>
+          <label>Phone number<input name="p" type="tel" required autocomplete="tel"
+              placeholder="e.g. 078720 00333"></label>
+          <label>I am looking for
+            <select name="t">
+              <option>A laptop or desktop</option>
+              <option>A Smart TV, AC or refrigerator</option>
+              <option>Printer repair or toner refill</option>
+              <option>Laptop or PC repair</option>
+              <option>CCTV installation</option>
+              <option>Something else</option>
+            </select>
+          </label>
+          <label>Message<textarea name="m"
+              placeholder="Tell us your requirement or describe the fault..."></textarea></label>
+          <button class="btn" type="submit">Send via WhatsApp</button>
+          <p class="note" id="note" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-col">
+        <a class="logo footer-logo" href="index.html"><i></i>Manna Infotech</a>
+        <p class="footer-about">4.2-star rated computer and electronics store in Belda, West Bengal. Sales, repair and
+          home security under one roof. Open daily till 9 PM.</p>
+      </div>
+      <div class="footer-col">
+        <b class="footer-heading">Quick Links</b>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="products.html">Products &amp; Sales</a>
+          <a href="services.html">Repair Services</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <b class="footer-heading">Services</b>
+        <nav class="footer-nav">
+          <a href="services.html">PC &amp; Laptop Repair</a>
+          <a href="services.html">Low Cost Printer Repair</a>
+          <a href="services.html">Laser Toner Refilling</a>
+          <a href="services.html">CCTV &amp; Home Security</a>
+          <a href="services.html">TV, AC &amp; Fridge Service</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <b class="footer-heading">Store Location</b>
+        <p class="footer-addr">Near Police Station, NH 5, Belda, West Bengal 721424</p>
+        <a href="tel:07872000333" class="footer-phone">078720 00333</a>
+        <p class="footer-hours">Open Daily &bull; 9:30 AM – 9:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="wrap footer-bottom-inner">
+        <span>&copy; 2026 Manna Infotech (মান্না ইনফোটেক). Belda, West Bengal. All Rights Reserved.</span>
+        <span>Google 4.2 Rating &bull; Doorstep Delivery &bull; Genuine Warranty</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ REPAIR MODAL ═══ -->
+  <div class="modal-overlay" id="repairModal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">Book a Device Repair in Belda</h3>
+        <button type="button" class="modal-close" data-close-modal aria-label="Close">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="js-repair-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="repairName">Your Full Name</label>
+              <input type="text" id="repairName" name="name" class="form-control" placeholder="e.g. Rahul Pradhan"
+                required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="repairPhone">Phone Number</label>
+              <input type="tel" id="repairPhone" name="phone" class="form-control" placeholder="e.g. 07872000333"
+                required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="deviceType">Device Type</label>
+              <select id="deviceType" name="device_type" class="form-control" required>
+                <option value="Laptop">Laptop (HP, Dell, Lenovo, etc.)</option>
+                <option value="Desktop PC">Desktop PC / Workstation</option>
+                <option value="Printer">Laser / InkTank Printer Repair &amp; Refill</option>
+                <option value="Smart TV">Smart LED TV</option>
+                <option value="Air Conditioner">Air Conditioner (AC)</option>
+                <option value="Refrigerator">Refrigerator</option>
+                <option value="CCTV Security">CCTV Security System</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="deviceModel">Brand &amp; Model</label>
+              <input type="text" id="deviceModel" name="device_model" class="form-control"
+                placeholder="e.g. HP 15s / Epson L3210" required>
+            </div>
+            <div class="form-group full-width">
+              <label class="form-label" for="issueDetails">Describe the Problem</label>
+              <textarea id="issueDetails" name="issue" class="form-control"
+                placeholder="e.g. No display / paper jam / need toner refill..."></textarea>
+            </div>
+            <div class="form-group full-width">
+              <button type="submit" class="btn btn-whatsapp btn-block">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                </svg>
+                Confirm &amp; Send Booking via WhatsApp
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ FLOATING WHATSAPP ═══ -->
+  <a href="https://wa.me/917872000333" target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn"
+    aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path
+        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+    </svg>
+    <span class="whatsapp-float-tooltip">Chat on WhatsApp</span>
+  </a>
+
+  <script>
+    /* ── Products ── */
+    var P = [
+      { n: 'HP Laptop (Core i5, 16GB, 512GB SSD)', c: 'Laptops', d: '15.6 inch, Windows 11, 1 Year Warranty', img: 'images/products/laptop_hp.jpg' },
+      { n: 'Dell Laptop (Core i3, 8GB, 256GB SSD)', c: 'Laptops', d: 'Student / Office, Windows 11', img: 'images/products/laptop_dell.jpg' },
+      { n: 'Custom Desktop (Core i5 / Ryzen 5)', c: 'Desktops', d: '8GB RAM, 512GB SSD, Built &amp; Tested', img: 'images/products/pc_custom.jpg' },
+      { n: 'Office Desktop (Core i3, 8GB)', c: 'Desktops', d: 'Complete setup with keyboard &amp; mouse', img: 'images/products/pc_office.jpg' },
+      { n: 'Samsung Smart 4K TV (43 / 55 inch)', c: 'TVs &amp; Appliances', d: 'Ultra HD, HDR, Wi-Fi, free delivery', img: 'images/products/tv_samsung.jpg' },
+      { n: 'Voltas / Daikin Inverter AC (1.5 Ton)', c: 'TVs &amp; Appliances', d: '5-Star split, free installation Belda', img: 'images/products/ac_inverter.jpg' },
+      { n: 'Epson L3210 / L3250 Ink Tank Printer', c: 'Printers', d: 'Print, scan, copy, original ink tank', img: 'images/products/printer_epson.jpg' },
+      { n: 'CP Plus CCTV 4-Camera Kit', c: 'CCTV &amp; Security', d: 'HD cameras, DVR, mobile live view', img: 'images/products/cctv_kit.jpg' }
+    ];
+    var I = {
+      'Laptops': '<rect x="16" y="20" width="64" height="42" rx="4"/><path d="M8 72h80"/>',
+      'Desktops': '<rect x="10" y="12" width="50" height="40" rx="4"/><path d="M28 60h14M35 52v8"/><rect x="68" y="16" width="18" height="52" rx="3"/>',
+      'TVs &amp; Appliances': '<rect x="8" y="14" width="80" height="50" rx="5"/><path d="M34 80h28M48 64v16"/>',
+      'Printers': '<rect x="18" y="34" width="60" height="30" rx="4"/><path d="M28 34V16h40v18M28 54h40v22H28z"/>',
+      'CCTV &amp; Security': '<circle cx="48" cy="34" r="16"/><path d="M20 72l28-22 28 22"/><circle cx="48" cy="34" r="6"/>'
+    };
+    var cats = ['All'].concat(P.map(function (x) { return x.c }).filter(function (v, i, a) { return a.indexOf(v) === i }));
+    var sel = 'All';
+    var $ = function (i) { return document.getElementById(i) };
+    function tabs() { $('tabs').innerHTML = ''; cats.forEach(function (c) { var b = document.createElement('button'); b.className = 'tab'; b.textContent = c.replace(/&amp;/g, '&'); b.setAttribute('aria-pressed', c === sel); b.onclick = function () { sel = c; tabs(); grid() }; $('tabs').appendChild(b) }) }
+    function grid() {
+      var g = $('grid'); g.innerHTML = ''; P.forEach(function (x, i) {
+        if (sel !== 'All' && x.c !== sel) return;
+        var e = document.createElement('article'); e.className = 'card';
+        var media = '<img src="' + x.img + '" alt="' + x.n + '" loading="lazy">';
+        e.innerHTML = '<div class="thumb">' + media + '</div><div class="body"><small>' + x.c.replace(/&amp;/g, '&') + '</small><h3>' + x.n + '</h3><small>' + x.d + '</small><div class="price">Call for Price</div><button class="btn" data-i="' + i + '">Inquire on WhatsApp</button></div>';
+        g.appendChild(e)
+      }); reveal('#grid .card')
+    }
+    $('grid').addEventListener('click', function (e) {
+      var b = e.target.closest('button[data-i]'); if (!b) return;
+      var item = P[b.dataset.i];
+      var msg = encodeURIComponent('Hi Manna Infotech,\nI want to inquire about: ' + item.n + '\nSpec: ' + item.d + '\nPlease share today\'s price and availability.');
+      window.open('https://wa.me/917872000333?text=' + msg, '_blank');
+    });
+
+    /* ── Hero Slider ── */
+    var sl = document.querySelectorAll('.slide'), cur = 0, tm;
+    sl.forEach(function (s, i) { var d = document.createElement('button'); d.className = 'dot'; d.setAttribute('aria-label', 'Go to slide ' + (i + 1)); d.onclick = function () { go(i, 1) }; $('dots').appendChild(d) });
+    function go(i, u) { cur = (i + sl.length) % sl.length; sl.forEach(function (s, k) { s.classList.toggle('on', k === cur); s.setAttribute('aria-hidden', k !== cur) });[].forEach.call($('dots').children, function (d, k) { d.classList.toggle('on', k === cur) }); if (u) start() }
+    function start() { clearInterval(tm); var d = $('dots').children[cur]; if (d) { d.classList.remove('on'); void d.offsetWidth; d.classList.add('on') } if (!matchMedia('(prefers-reduced-motion:reduce)').matches) tm = setInterval(function () { go(cur + 1) }, 6000) }
+    $('prev').onclick = function () { go(cur - 1, 1) }; $('next').onclick = function () { go(cur + 1, 1) };
+    var hs = document.querySelector('.slider'); hs.onmouseenter = function () { clearInterval(tm) }; hs.onmouseleave = start;
+    var sx = null; hs.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX }, { passive: true });
+    hs.addEventListener('touchend', function (e) { if (sx === null) return; var d = e.changedTouches[0].clientX - sx; if (Math.abs(d) > 50) go(cur + (d < 0 ? 1 : -1), 1); sx = null });
+
+    /* ── Stars ── */
+    document.querySelectorAll('.stars').forEach(function (s) { s.innerHTML = new Array(6).join('<svg><use href="#st"/></svg>'); s.setAttribute('role', 'img'); s.setAttribute('aria-label', '5 out of 5 stars') });
+
+    /* ── Reviews scroll ── */
+    var rs = $('rev'), rt = $('rthumb'), rtm;
+    function rstep(d) { var w = rs.querySelector('.rc').offsetWidth + 20; if (d > 0 && rs.scrollLeft + rs.clientWidth >= rs.scrollWidth - 6) rs.scrollTo({ left: 0, behavior: 'smooth' }); else if (d < 0 && rs.scrollLeft < 6) rs.scrollTo({ left: rs.scrollWidth, behavior: 'smooth' }); else rs.scrollBy({ left: d * w, behavior: 'smooth' }) }
+    function rsync() { rt.style.width = Math.min(100, rs.clientWidth / rs.scrollWidth * 100) + '%'; rt.style.left = rs.scrollLeft / rs.scrollWidth * 100 + '%' }
+    function rplay() { clearInterval(rtm); if (!matchMedia('(prefers-reduced-motion:reduce)').matches) rtm = setInterval(function () { rstep(1) }, 4500) }
+    $('rprev').onclick = function () { rstep(-1); rplay() }; $('rnext').onclick = function () { rstep(1); rplay() };
+    rs.addEventListener('scroll', rsync, { passive: true });
+    ['mouseenter', 'focusin', 'touchstart'].forEach(function (ev) { rs.addEventListener(ev, function () { clearInterval(rtm) }, { passive: true }) });
+    ['mouseleave', 'focusout', 'touchend'].forEach(function (ev) { rs.addEventListener(ev, rplay, { passive: true }) });
+    addEventListener('resize', rsync);
+
+    /* ── Mobile Nav Drawer ── */
+    function drawer(o) { $('nav').classList.toggle('open', o); $('scrim').classList.toggle('on', o); $('menu').setAttribute('aria-expanded', o); document.body.style.overflow = o ? 'hidden' : ''; if (o && $('x')) $('x').focus() }
+    $('menu').onclick = function () { drawer(true) };
+    $('x').onclick = function () { drawer(false) };
+    $('scrim').onclick = function () { drawer(false) };
+    $('nav').onclick = function (e) { if (e.target.tagName === 'A') drawer(false) };
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { drawer(false); closeModals() } });
+    addEventListener('resize', function () { if (innerWidth > 960) drawer(false) });
+
+    /* ── Contact form → WhatsApp ── */
+    $('visitForm').onsubmit = function (e) {
+      e.preventDefault();
+      var n = e.target.n.value, p = e.target.p.value, t = e.target.t.value, m = e.target.m.value;
+      var msg = encodeURIComponent('Hello Manna Infotech,\nName: ' + n + '\nPhone: ' + p + '\nLooking for: ' + t + '\nMessage: ' + (m || '–'));
+      window.open('https://wa.me/917872000333?text=' + msg, '_blank');
+      $('note').textContent = 'Opening WhatsApp... Our team will reply shortly.';
+    };
+
+    /* ── Modals ── */
+    function openModal(id) { var m = document.getElementById(id); if (m) { m.classList.add('open'); document.body.style.overflow = 'hidden'; } }
+    function closeModals() { document.querySelectorAll('.modal-overlay.open').forEach(function (m) { m.classList.remove('open'); }); document.body.style.overflow = ''; }
+    document.querySelectorAll('[data-open-modal]').forEach(function (btn) { btn.addEventListener('click', function () { openModal(btn.getAttribute('data-open-modal')); }); });
+    document.querySelectorAll('.modal-overlay').forEach(function (m) { m.addEventListener('click', function (e) { if (e.target === m) closeModals(); }); });
+    document.querySelectorAll('[data-close-modal]').forEach(function (btn) { btn.addEventListener('click', closeModals); });
+    document.querySelector('.js-repair-form').onsubmit = function (e) {
+      e.preventDefault();
+      var d = new FormData(e.target), msg = 'Hi Manna Infotech, I want to book a repair:\n';
+      d.forEach(function (v, k) { msg += k.replace(/_/g, ' ') + ': ' + v + '\n'; });
+      window.open('https://wa.me/917872000333?text=' + encodeURIComponent(msg), '_blank');
+      closeModals();
+    };
+
+    /* ── Intersection Observer Reveals ── */
+    var io = window.IntersectionObserver && !matchMedia('(prefers-reduced-motion:reduce)').matches ? new IntersectionObserver(function (es) { es.forEach(function (e) { if (!e.isIntersecting) return; var t = e.target; t.classList.add('in'); io.unobserve(t); setTimeout(function () { t.classList.remove('rv', 'in'); t.style.transitionDelay = '' }, 1200) }) }, { threshold: .12 }) : null;
+    function reveal(sel) { if (!io) return; document.querySelectorAll(sel).forEach(function (el, i) { if (el.classList.contains('rv')) return; el.classList.add('rv'); el.style.transitionDelay = (i % 4) * 80 + 'ms'; io.observe(el) }) }
+
+    /* ── Counter Animation ── */
+    document.querySelectorAll('[data-to]').forEach(function (b) { if (!io) return; var to = +b.dataset.to, s = b.dataset.s || ''; var o = new IntersectionObserver(function (es) { if (!es[0].isIntersecting) return; o.disconnect(); var t0 = performance.now(); (function f(t) { var p = Math.min((t - t0) / 1400, 1); b.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))).toLocaleString('en-IN') + s; if (p < 1) requestAnimationFrame(f) })(t0) }, { threshold: .6 }); o.observe(b) });
+
+    reveal('.head,.svc,.stats>.wrap>div,.cta,.info,#visitForm,details');
+    tabs(); grid(); go(0); start(); rsync(); rplay();
+  </script>
+</body>
+
+</html>
