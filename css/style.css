@@ -49,6 +49,7 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   max-width: 100%;
+  padding-top: 68px;
 }
 
 h1,
@@ -165,12 +166,16 @@ textarea {
 
 /* ── Header ──────────────────────────────────────────────────────────────── */
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 20;
-  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(14, 19, 28, 0.94);
   border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 header .wrap {
@@ -2341,8 +2346,9 @@ footer > .wrap:not(.footer-bottom-inner) {
 
   /* Nav → slide drawer */
   header {
-    backdrop-filter: none;
-    background: var(--surface);
+    background: rgba(14, 19, 28, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
   }
 
   .menu {
@@ -2365,7 +2371,7 @@ footer > .wrap:not(.footer-bottom-inner) {
     opacity: 0;
     visibility: hidden;
     transition: opacity .3s, visibility .3s;
-    z-index: 19;
+    z-index: 110;
   }
 
   .scrim.on {
@@ -2389,7 +2395,7 @@ footer > .wrap:not(.footer-bottom-inner) {
     transform: translateX(100%);
     visibility: hidden;
     transition: transform .3s ease, visibility .3s;
-    z-index: 20;
+    z-index: 120;
     overflow-y: auto;
   }
 
@@ -2498,6 +2504,7 @@ footer > .wrap:not(.footer-bottom-inner) {
 @media (max-width: 560px) {
   body {
     font-size: 16px;
+    padding-top: 60px;
   }
 
   header .wrap {
