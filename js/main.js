@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Mobile Nav Drawer (Nexora Header System)
+  // Mobile Nav Dropdown (Nexora Header System)
   const navDrawer = document.getElementById('nav');
   const scrim = document.getElementById('scrim');
   const menuBtn = document.getElementById('menu');
@@ -34,18 +34,35 @@ document.addEventListener('DOMContentLoaded', () => {
     if (navDrawer) navDrawer.classList.toggle('open', open);
     if (scrim) scrim.classList.toggle('on', open);
     if (menuBtn) menuBtn.setAttribute('aria-expanded', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-    if (open && closeBtn) closeBtn.focus();
   }
 
-  if (menuBtn) menuBtn.addEventListener('click', () => toggleDrawer(true));
-  if (closeBtn) closeBtn.addEventListener('click', () => toggleDrawer(false));
-  if (scrim) scrim.addEventListener('click', () => toggleDrawer(false));
-  if (navDrawer) {
-    navDrawer.addEventListener('click', (e) => {
-      if (e.target.tagName === 'A') toggleDrawer(false);
+  if (menuBtn) {
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = navDrawer && navDrawer.classList.contains('open');
+      toggleDrawer(!isOpen);
     });
   }
+
+  if (closeBtn) closeBtn.addEventListener('click', () => toggleDrawer(false));
+  if (scrim) scrim.addEventListener('click', () => toggleDrawer(false));
+
+  document.addEventListener('click', (e) => {
+    if (navDrawer && navDrawer.classList.contains('open')) {
+      if (!navDrawer.contains(e.target) && !menuBtn.contains(e.target)) {
+        toggleDrawer(false);
+      }
+    }
+  });
+
+  if (navDrawer) {
+    navDrawer.addEventListener('click', (e) => {
+      if (e.target.tagName === 'A' || e.target.hasAttribute('data-open-modal')) {
+        toggleDrawer(false);
+      }
+    });
+  }
+
   window.addEventListener('resize', () => {
     if (window.innerWidth > 960) toggleDrawer(false);
   });

@@ -6,13 +6,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Manna Infotech (মান্না ইনফোটেক) | Belda - Computers, TVs, AC &amp; Repair Services</title>
   <meta name="description"
-    content="Manna Infotech in Belda, West Bengal (4.2 rating, 280+ reviews). Sales of laptops, desktops, Smart TVs, ACs, refrigerators, CCTV security and certified chip-level printer and computer repair.">
+    content="Manna Infotech in Belda, West Bengal (4.2★, 280+ reviews). Showroom for laptops, custom PCs, Smart TVs, Inverter ACs, refrigerators, and low-cost printer &amp; chip-level computer repairs near Belda Police Station.">
+  <meta name="keywords"
+    content="Manna Infotech, Belda computer shop, laptop repair Belda, printer repair Belda, Smart TV showroom Belda, inverter AC Belda, CCTV camera installation Belda, Paschim Medinipur computer store">
+  <meta name="author" content="Manna Infotech">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#07090f">
+  <meta name="msapplication-navbutton-color" content="#07090f">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=yes">
+
+  <!-- Local SEO Geo Tags -->
+  <meta name="geo.region" content="IN-WB">
+  <meta name="geo.placename" content="Belda, Paschim Medinipur">
+  <meta name="geo.position" content="21.9497;87.3436">
+  <meta name="ICBM" content="21.9497, 87.3436">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Manna Infotech">
+  <meta property="og:title" content="Manna Infotech | Belda - Computers, TVs, AC &amp; Repair Services">
+  <meta property="og:description"
+    content="Belda's top-rated electronics showroom and chip-level repair hub. 4.2★ Google rating with 280+ reviews. Open 7 days a week till 9 PM on NH 5.">
+  <meta property="og:image" content="images/hero_showroom.jpg">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Manna Infotech | Belda - Computers, TVs, AC &amp; Repair Services">
+  <meta name="twitter:description"
+    content="Belda's top-rated electronics showroom and chip-level repair hub. 4.2★ Google rating with 280+ reviews. Open 7 days a week till 9 PM on NH 5.">
+  <meta name="twitter:image" content="images/hero_showroom.jpg">
+
+  <!-- Fonts & Stylesheet -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ElectronicsStore",
+    "name": "Manna Infotech (মান্না ইনফোটেক)",
+    "image": "images/hero_showroom.jpg",
+    "telephone": "+917872000333",
+    "priceRange": "₹₹",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "NH 5, Near Police Station",
+      "addressLocality": "Belda, Mahammadpur",
+      "addressRegion": "West Bengal",
+      "postalCode": "721424",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 21.9497,
+      "longitude": 87.3436
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "09:30",
+      "closes": "21:00"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.2",
+      "reviewCount": "280"
+    }
+  }
+  </script>
 </head>
 
 <body>
@@ -604,14 +672,15 @@
     ['mouseleave', 'focusout', 'touchend'].forEach(function (ev) { rs.addEventListener(ev, rplay, { passive: true }) });
     addEventListener('resize', rsync);
 
-    /* ── Mobile Nav Drawer ── */
-    function drawer(o) { $('nav').classList.toggle('open', o); $('scrim').classList.toggle('on', o); $('menu').setAttribute('aria-expanded', o); document.body.style.overflow = o ? 'hidden' : ''; if (o && $('x')) $('x').focus() }
-    $('menu').onclick = function () { drawer(true) };
-    $('x').onclick = function () { drawer(false) };
-    $('scrim').onclick = function () { drawer(false) };
-    $('nav').onclick = function (e) { if (e.target.tagName === 'A') drawer(false) };
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { drawer(false); closeModals() } });
-    addEventListener('resize', function () { if (innerWidth > 960) drawer(false) });
+    /* ── Mobile Nav Dropdown ── */
+    function drawer(o) { $('nav').classList.toggle('open', o); if ($('scrim')) $('scrim').classList.toggle('on', o); $('menu').setAttribute('aria-expanded', o); }
+    $('menu').onclick = function (e) { e.stopPropagation(); var o = !$('nav').classList.contains('open'); drawer(o); };
+    if ($('x')) $('x').onclick = function () { drawer(false); };
+    if ($('scrim')) $('scrim').onclick = function () { drawer(false); };
+    $('nav').onclick = function (e) { if (e.target.tagName === 'A' || e.target.hasAttribute('data-open-modal')) drawer(false); };
+    document.addEventListener('click', function (e) { if ($('nav').classList.contains('open') && !$('nav').contains(e.target) && !$('menu').contains(e.target)) drawer(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { drawer(false); closeModals(); } });
+    addEventListener('resize', function () { if (innerWidth > 960) drawer(false); });
 
     /* ── Contact form → WhatsApp ── */
     $('visitForm').onsubmit = function (e) {
